@@ -49,3 +49,8 @@ body{
     left:0;
     min-width: 300px;
 }
+#carouselButton{
+    right: 0px;
+    position: absolute;
+    bottom: 0px;
+}
