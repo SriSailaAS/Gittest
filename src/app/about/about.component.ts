@@ -13,7 +13,7 @@ export class AboutComponent {
   constructor(private leaderService:LeaderService){
 }
 ngOnInit(){
-  this.leaders=this.leaderService.getLeaders();
+  this.leaderService.getLeaders().subscribe((l)=>this.leaders=l);
 }
 
 }

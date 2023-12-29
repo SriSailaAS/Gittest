@@ -21,9 +21,9 @@ export class HomeComponent {
 
     }
     ngOnInit(){
-      this.dish=this.dishService.getFeaturedDish();
-      this.promotion=this.promotionService.getFeaturedPromotion();
-      this.leader=this.leaderService.getFeaturedLeader();
+      this.dishService.getFeaturedDish().subscribe((d)=>this.dish=d);
+      this.promotionService.getFeaturedPromotion().subscribe((p)=>this.promotion=p);
+      this.leaderService.getFeaturedLeader().subscribe((l)=>this.leader=l);
     }
 
 }
